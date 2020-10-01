@@ -94,8 +94,8 @@ printBody = () => {
         let row = tbody.insertRow(i);
         let idCell = row.insertCell(0),
             countryCell = row.insertCell(1),
-            capitalCell = row.insertCell(2);
-        populationCell = row.insertCell(3);
+            capitalCell = row.insertCell(2),
+            populationCell = row.insertCell(3);
 
         idCell.innerHTML = list[i].id;
         countryCell.innerHTML = list[i].country;
