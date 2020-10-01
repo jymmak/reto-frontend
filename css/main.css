@@ -3,15 +3,9 @@ body {
     margin: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Fjalla One', sans-serif;
     font-weight: normal;
-    /* font-style: italic; */
 }
 
 h1 {
@@ -22,9 +16,9 @@ h1 {
     margin: 0;
 }
 
-    h1 strong {
-        color: #026fff;
-    }
+h1 strong {
+    color: #026fff;
+}
 
 h2 {
     color: #026fff;
@@ -43,9 +37,10 @@ h4 {
     font-size: 24px;
     margin-bottom: 40px;
 }
+
 .container {
     max-width: 1000px;
-       flex: 1;
+    flex: 1;
     margin: 0 auto;
     display: inherit;
     justify-content: inherit;
@@ -60,6 +55,7 @@ h4 {
 }
 
 /*Header*/
+
 header {
     background-color: #0c2151;
     display: flex;
@@ -69,11 +65,9 @@ header {
     flex-wrap: wrap;
 }
 
-
 figure {
     margin: 0 10px;
 }
-
 
 /*Map*/
 
@@ -87,47 +81,49 @@ figure {
     background-size: 100% 100%;
 }
 
-
-
 /*Table*/
 
-
 .list-country {
-    
-    padding:  20px 50px ;
+    padding: 20px 50px;
     border-color: #e7eaec;
     border-image: none;
     border-style: solid;
     border-width: 1px;
 }
+
 .table {
     width: 100%;
     margin-bottom: 1rem;
     color: #212529;
 }
 
-    .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
-        border: 1px solid #e7eaec;
-        line-height: 1.42857;
-        padding: 8px;
-        vertical-align: top;
-    }
-    .table > thead > tr > th {
-        border-bottom: 1px solid #DDDDDD;
-        vertical-align: bottom;
-    }
-    .table thead th {
-        vertical-align: bottom;
-        border-bottom: 2px solid #dee2e6;
-    }
-    .table td, .table th {
-        padding: .75rem;
-        vertical-align: top;
-        border-top: 1px solid #dee2e6;
-    }
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    border: 1px solid #e7eaec;
+    line-height: 1.42857;
+    padding: 8px;
+    vertical-align: top;
+}
+
+.table>thead>tr>th {
+    border-bottom: 1px solid #DDDDDD;
+    vertical-align: bottom;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
 th {
     text-align: inherit;
 }
+
 tr {
     display: table-row;
     vertical-align: inherit;
@@ -138,6 +134,79 @@ table {
     border-collapse: collapse;
 }
 
+/*Modal*/
+
+.modal-container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    transform: scale(0);
+    transition: all 0.25s ease-in-out;
+}
+
+.modal-container.opened {
+    transform: scale(1);
+}
+
+.modal {
+    position: relative;
+    min-height: 25%;
+    background-color: #fff;
+    margin: auto;
+    border-radius: 16px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 50px 20px 10px 20px;
+    text-align: center;
+}
+
+.modal>.modal-content {
+    padding: 22px;
+}
+
+.close {
+    position: absolute;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: #ff5050;
+    top: -12px;
+    border-radius: 50%;
+    right: -12px;
+}
+
+.close:before {
+    display: block;
+    content: "";
+    width: 50%;
+    margin: auto;
+    height: 4px;
+    background: #fff;
+    transform: rotate(45deg);
+    margin-top: calc(16px - 2px);
+}
+
+.close:after {
+    display: block;
+    content: "";
+    width: 50%;
+    height: 4px;
+    background: #fff;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 14px;
+    right: 8px;
+}
+
+.name-country {
+    color: #026fff;
+}
+
+/*Footer*/
+
 footer {
     color: white;
     background-color: #0c2151;
@@ -147,5 +216,3 @@ footer {
     flex-wrap: wrap;
     padding: 5px;
 }
-
- 

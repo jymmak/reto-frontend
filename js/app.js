@@ -90,14 +90,26 @@ printBody = () => {
         countryCell.innerHTML = list[i].country;
         capitalCell.innerHTML = list[i].capital;
 
-        tbody.appendChild(row)
+
+
+
+        countryCell.addEventListener('click', modalOpen = () => {
+
+            modalContainer = document.querySelector('.modal-container')
+            content = document.querySelector('.modal-content')
+            nameCountry = document.querySelector('.name-country')
+            modalContainer.classList.add('opened');
+
+            nameCountry.innerHTML = list[i].country;
+            content.innerHTML = list[i].population + ' ' + 'habitantes';
+            
+        });
+
     }
-
-
 }
 printBody()
 
-
-
-
-
+modalHide = () => {
+    const modalContainer = document.querySelector(".modal-container")
+    modalContainer.classList.remove("opened");
+}
