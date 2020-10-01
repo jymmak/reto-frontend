@@ -1,75 +1,87 @@
 let data = [
     {
         id: 1,
-        country: 'Canadá',
-        capital: 'Ottawa',
-        population: 37346000
+        country: 'Nigeria',
+        capital: 'Abuya',
+        population: 195874740,
+        continent: 'Africa'
     },
     {
         id: 2,
         country: 'Estados Unidos',
         capital: 'Washintong D.C',
-        population: 329071000
+        population: 329071000,
+        continent: 'América'
     },
     {
         id: 3,
-        country: 'México',
-        capital: 'Ciudad de México',
-        population: 125357000
+        country: 'Alemania',
+        capital: 'Berlín',
+        population: 83166711,
+        continent: 'Europa'
     },
     {
         id: 4,
-        country: 'Costa Rica',
-        capital: 'Belmopón',
-        population: 5032000
+        country: 'Turquía',
+        capital: 'Ankara',
+        population: 83154997,
+        continent: 'Asia'
     },
     {
         id: 5,
         country: 'Panamá',
         capital: 'Panamá',
-        population: 4190000
+        population: 4190000,
+        continent: 'América'
     },
     {
         id: 6,
-        country: 'Cuba',
-        capital: 'La Habana',
-        population: 11212000
+        country: 'Bélgica',
+        capital: 'Bruselas',
+        population: 11549888,
+        continent: 'Europa'
     },
     {
         id: 7,
-        country: 'Argentina',
-        capital: 'Buenos Aires',
-        population: 44723000
+        country: 'China',
+        capital: 'Pekín',
+        population: 1395380000,
+        continent: 'Asia'
     },
     {
         id: 8,
-        country: 'Bolivia',
-        capital: 'La Paz',
-        population: 11390000
+        country: 'Egipto',
+        capital: 'El Cairo',
+        population: 96980000,
+        continent: 'Africa'
     },
     {
         id: 9,
-        country: 'Brazil',
-        capital: 'Brazilia',
-        population: 210461000
+        country: 'Costa Rica',
+        capital: 'Belmopón',
+        population: 5032000,
+        continent: 'América'
     },
     {
         id: 10,
-        country: 'Chile',
-        capital: 'Santiago',
-        population: 18880000
+        country: 'Nueva Zelanda',
+        capital: 'Wellington',
+        population: 4930000,
+        continent: 'Oceanía'
     },
     {
         id: 11,
-        country: 'Colombia',
-        capital: 'Bogotá',
-        population: 45878000
+        country: 'Islas Salomón',
+        capital: 'Honiara',
+        population: 652858,
+        continent: 'Oceanía'
     },
     {
         id: 12,
-        country: 'Ecuador',
-        capital: 'Quito',
-        population: 17170000
+        country: 'Canadá',
+        capital: 'Ottawa',
+        population: 37346000,
+        continent: 'América'
     }
 ]
 
@@ -83,10 +95,12 @@ printBody = () => {
         let idCell = row.insertCell(0),
             countryCell = row.insertCell(1),
             capitalCell = row.insertCell(2);
+        populationCell = row.insertCell(3);
 
         idCell.innerHTML = list[i].id;
         countryCell.innerHTML = list[i].country;
         capitalCell.innerHTML = list[i].capital;
+        populationCell.innerHTML = list[i].population;
         countryCell.classList.add('cursor');
 
 
@@ -97,7 +111,8 @@ printBody = () => {
             modalContainer.classList.add('opened');
 
             nameCountry.innerHTML = list[i].country;
-            content.innerHTML = list[i].population + ' ' + 'habitantes';
+            content.innerHTML = list[i].continent;
+            content.classList.add('uppercase');
         });
 
     }
