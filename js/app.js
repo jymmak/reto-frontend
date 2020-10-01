@@ -64,14 +64,12 @@ let data = [
         country: 'Colombia',
         capital: 'Bogotá',
         population: 45878000
-
     },
     {
         id: 12,
         country: 'Ecuador',
         capital: 'Quito',
         population: 17170000
-
     }
 ]
 
@@ -89,12 +87,10 @@ printBody = () => {
         idCell.innerHTML = list[i].id;
         countryCell.innerHTML = list[i].country;
         capitalCell.innerHTML = list[i].capital;
-
-
+        countryCell.classList.add('cursor');
 
 
         countryCell.addEventListener('click', modalOpen = () => {
-
             modalContainer = document.querySelector('.modal-container')
             content = document.querySelector('.modal-content')
             nameCountry = document.querySelector('.name-country')
@@ -102,7 +98,6 @@ printBody = () => {
 
             nameCountry.innerHTML = list[i].country;
             content.innerHTML = list[i].population + ' ' + 'habitantes';
-            
         });
 
     }

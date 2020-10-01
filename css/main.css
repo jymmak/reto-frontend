@@ -3,26 +3,13 @@ body {
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h4 {
     font-family: 'Fjalla One', sans-serif;
     font-weight: normal;
 }
 
-h1 {
-    font-size: 40px;
-    line-height: 1.5;
-    letter-spacing: -.2px;
-    color: white;
-    margin: 0;
-}
-
-h1 strong {
-    color: #026fff;
-}
-
 h2 {
     color: #026fff;
-    text-transform: uppercase;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
     font-size: 24px;
@@ -49,10 +36,6 @@ h4 {
     flex-wrap: inherit;
 }
 
-.flexbox {
-    display: flex;
-    flex-wrap: wrap;
-}
 
 /*Header*/
 
@@ -95,6 +78,7 @@ figure {
     width: 100%;
     margin-bottom: 1rem;
     color: #212529;
+    text-align: center;
 }
 
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
@@ -165,6 +149,10 @@ table {
 
 .modal>.modal-content {
     padding: 22px;
+}
+
+.cursor {
+    cursor: pointer;
 }
 
 .close {
